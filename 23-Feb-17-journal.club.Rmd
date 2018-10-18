@@ -1,23 +1,20 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title></title>
-    <meta charset="utf-8">
-    <meta name="author" content="Ben Krajacich" />
-    <link rel="stylesheet" href="https:\\cdn.rawgit.com\benkraj\nih_xaringan\master\nih3.css" type="text/css" />
-    <link rel="stylesheet" href="https:\\cdn.rawgit.com\benkraj\nih_xaringan\master\nih-fonts.css" type="text/css" />
-  </head>
-  <body>
-    <textarea id="source">
-class: center, middle, inverse, title-slide
-
-# </br>
-## Short Overview of Portable Long Read Sequencers
-### Ben Krajacich
-### NIH Journal Club </br> 2018-02-21
-
 ---
-
+title: " </br>"
+subtitle: "Short Overview of Portable Long Read Sequencers"
+author: "Ben Krajacich"
+date: "NIH Journal Club </br> `r Sys.Date()`"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    chakra: libs/remark-latest.min.js
+    css: ["https://cdn.rawgit.com/benkraj/nih_xaringan/master/nih3.css",     "https://cdn.rawgit.com/benkraj/nih_xaringan/master/nih-fonts.css"]
+    nature:
+      beforeInit: "https://cdn.rawgit.com/benkraj/nih_xaringan/master/ru_xaringan.js"
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: "16:9"
+---
 class: center, middle
 
 # Disclaimer
@@ -68,7 +65,7 @@ layout: false
 --
 
 .right-column[
-&lt;br&gt;&lt;br&gt;&lt;br&gt;
+<br><br><br>
 ### - **Repeat regions** or areas with low complexity may be lost
 ![](repeats.jpg)
 ]
@@ -87,7 +84,7 @@ layout: false
 ]
 
 .right-column[
-&lt;br&gt;&lt;br&gt;&lt;br&gt;
+<br><br><br>
 ### - Short reads make **genome assembly** difficult 
 ]
 
@@ -112,7 +109,7 @@ layout: false
   ### Huge range:
 ]
 .right-column[
-&lt;br&gt;&lt;br&gt;&lt;br&gt;
+<br><br><br>
 ![](genomesize.jpg) 
 ]
 
@@ -135,7 +132,7 @@ layout: false
 ]
 
 .right-column[
-&lt;br&gt;&lt;br&gt;&lt;br&gt;
+<br><br><br>
 ![](tulip.jpg) 
 ]
 .footnote[Image from Christiaan Henkel - https://www.youtube.com/watch?v=zRHCaaEfVvo]
@@ -184,7 +181,7 @@ layout: false
 --
 
 .right-column[
-### - Pacbio has introduced longer reads up to 60 kb.
+### - Pacbio has introduced longer reads up to 60 kb (albeit rare).
 ![](pacreadlength.jpg)
 .footnote[https://www.pacb.com/smrt-science/smrt-sequencing/read-lengths/]
 ]
@@ -206,7 +203,7 @@ layout: false
 class: center, middle
 #Nanopore Overview:
 
-&lt;iframe width="560" height="315" src="http://www.youtube.com/embed/E9-Rm5AoZGw?rel=0?start=0&amp;end=147" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
+<iframe width="560" height="315" src="http://www.youtube.com/embed/E9-Rm5AoZGw?rel=0?start=0&end=147" frameborder="0" allowfullscreen></iframe>
 
 ---
 layout: false
@@ -214,7 +211,7 @@ layout: false
   ### **Nanopore Machines:**
 ]
 .right-column[
-&lt;br&gt;&lt;br&gt;&lt;br&gt;
+<br><br><br>
 ![](nanoporeline.jpg)
 ]
 ---
@@ -224,56 +221,20 @@ layout: false
 ]
 
 .right-column[
-&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
-&lt;table&gt;
- &lt;thead&gt;
-  &lt;tr&gt;
-   &lt;th style="text-align:left;"&gt;  &lt;/th&gt;
-   &lt;th style="text-align:left;"&gt; Illumina &lt;/th&gt;
-   &lt;th style="text-align:left;"&gt; PacBio &lt;/th&gt;
-   &lt;th style="text-align:left;"&gt; Nanopore &lt;/th&gt;
-  &lt;/tr&gt;
- &lt;/thead&gt;
-&lt;tbody&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Instrument &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; HiSeq 2500 &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; Sequel &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; MinION &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Read Length &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; 50-250 bp &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; 10-15 kb &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; Up to 900 kb &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Error Rate &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; 0.5-1% &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; 10-15% &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; 5-15% &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Output &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; ~25 Gb/Lane &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; 5 - 10 Gb &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; 10-20 Gb &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Instrument Price &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; $740,000 &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; $350,000 &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; $1000** &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Run Price &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; ~$1300 &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; ~$850 &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; $500-$900 &lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
+<br><br><br><br>
+```{r table, echo=FALSE} 
+suppressWarnings(pacman::p_load(tidyverse, knitr, kableExtra))
+df <- data.frame(Metric=c("Instrument", "Read Length", "Error Rate", "Output", "Instrument Price", "Run Price"),
+                 Illumina=c("HiSeq 2500", "50-250 bp", "0.5-1%", "~25 Gb/Lane", "$740,000", "~$1300"),
+                 PacBio=c("Sequel", "10-15 kb", "10-15%", "5 - 10 Gb", "$350,000", "~$850"),
+                 Nanopore=c("MinION", "Up to 900 kb", "5-15%", "10-20 Gb", "$1000**", "$500-$900"))
+df %>%
+  kable('html', col.names = c("", "Illumina", "PacBio", "Nanopore"))
+                 
+```
 ]
+???
+Error rate in ONT is particularly for homopolymers of >= 6 bases. 
 ---
 layout:false
 .left-column[
@@ -306,8 +267,9 @@ layout: false
 .right-column[
 ![:scale 75%](longreadsLOMAN.jpg)
 #### Longest aligned reads: 778217, 771227, 671129, 646399, 603564, 55941, 553029, 494330, 487836, and 470664 bases
-]
 .foot-note[http://lab.loman.net/2017/03/09/ultrareads-for-nanopore/]
+]
+
 
 ???
 Newest chemistry has bases going through the pore at 250 bases/second
@@ -327,7 +289,7 @@ Newest chemistry has bases going through the pore at 250 bases/second
 ]
 
 .right-column[
-&lt;br&gt;&lt;br&gt;&lt;br&gt;
+<br><br><br>
 ![](spangaps.jpg)
 ]
 
@@ -344,7 +306,7 @@ layout: FALSE
 ]
 
 .right-column[
-&lt;br&gt;&lt;br&gt;&lt;br&gt;
+<br><br><br>
 ![](cliveome.jpg)
 ]
 .footnote[### Image from Sergey Koren]
@@ -362,7 +324,7 @@ layout: FALSE
 ]
 
 .right-column[
-&lt;br&gt;&lt;br&gt;&lt;br&gt;
+<br><br><br>
 ![](hic.jpg)
 ]
 .footnote[### Image from Sergey Koren]
@@ -383,7 +345,7 @@ layout: FALSE
 ]
 
 .right-column[
-&lt;br&gt;&lt;br&gt;&lt;br&gt;
+<br><br><br>
 ### Like **telomeres**
 ![](telomere.jpg)
 ]
@@ -408,7 +370,7 @@ layout: FALSE
 ]
 
 .right-column[
-&lt;br&gt;&lt;br&gt;&lt;br&gt;
+<br><br><br>
 ![:scale 35%](altsplicing.jpg)
 ]
 .footnote[CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=6642977]
@@ -419,6 +381,9 @@ class: center, middle
 ![](title.jpg)
 
 ???
+- Mostly a proof of concept paper (i.e. lots of correlations to existing tech).
+
+
 - About 6 months old
 
 
@@ -455,7 +420,9 @@ compared to Illumina (100bp Paired-End).
 .foot-note[https://www.slideshare.net/AustralianBioinformatics/felicity-newell-ngs-mapping-errors-and-quality-control]
 ]
 
-
+???
+Bit confusing as they used read counts rather than # of mapped.
+The number of reads that mapped to the yeast transcriptome was 2,777,523 (79.29% of reads) for the direct RNA data set; 5,735,508 (90.36%) for the cDNA data set; and 572,206,890 (79.32%) for the Illumina data set.
 ---
 .left-column[
 ## Why sequence direct from RNA? 
@@ -470,7 +437,7 @@ compared to Illumina (100bp Paired-End).
 ---
 layout: false
 .left-column[
-  ## Figure 1b:
+  ### Figure 1b:
 ]
 .right-column[
 ![:scale 85%](figure1b.jpg)
@@ -480,8 +447,8 @@ layout: false
 ---
 layout: false
 .left-column[
-  ## Figure 1b:
-  ## Supp. Fig. 1:
+  ### Figure 1b:
+  ### Supp. Fig. 1:
 ]
 .right-column[
 ![](readlength.jpg)
@@ -491,9 +458,9 @@ layout: false
 ---
 layout: false
 .left-column[
-  ## Figure 1b:
-  ## Supp. Fig. 1:
-  ## Supp. Fig. 2a:
+  ### Figure 1b:
+  ### Supp. Fig. 1:
+  ### Supp. Fig. 2a:
 ]
 .right-column[
 ![:scale 75%](readaccuracy.jpg)
@@ -503,24 +470,41 @@ layout: false
 ---
 layout: false
 .left-column[
-  ## Figure 1b:
-  ## Supp. Fig. 1:
-  ## Supp. Fig. 2a:
-  ## Figure 2a:
+  ### Figure 1b:
+  ### Supp. Fig. 1:
+  ### Supp. Fig. 2a:
+  ### Figure 2a:
 ]
 .right-column[
 ![:scale 70%](figure2a.jpg)
  ### Correlation of read counts after mapping.
 ]
-
+???
+Technical replicates (5) showed high correlation for read counts - 0.94-0.96 over 6713 transcripts.
 ---
 layout: false
 .left-column[
-  ## Figure 1b:
-  ## Supp. Fig. 1:
-  ## Supp. Fig. 2a:
-  ## Figure 2a:
-  ## Figure 3a:
+  ### Figure 1b:
+  ### Supp. Fig. 1:
+  ### Supp. Fig. 2a:
+  ### Figure 2a:
+  ### Figure 2d:
+]
+.right-column[
+![:scale 65%](fig2d.jpg)
+ ### Detection of GAPDH isozymes in yeast (based on 42 SNPs dispersed through gene).
+]
+???
+GAPDH in saccharomyces is 996 bp long.
+---
+layout: false
+.left-column[
+  ### Figure 1b:
+  ### Supp. Fig. 1:
+  ### Supp. Fig. 2a:
+  ### Figure 2a:
+  ### Figure 2d:
+  ### Figure 3a:
 ]
 .right-column[
 ![:scale 65%](figure3a.jpg)
@@ -529,12 +513,13 @@ layout: false
 ---
 layout: false
 .left-column[
-  ## Figure 1b:
-  ## Supp. Fig. 1:
-  ## Supp. Fig. 2a:
-  ## Figure 2a:
-  ## Figure 3a:
-  ## Figure 4:
+  ### Figure 1b:
+  ### Supp. Fig. 1:
+  ### Supp. Fig. 2a:
+  ### Figure 2a:
+  ### Figure 2d:
+  ### Figure 3a:
+  ### Figure 4:
 ]
 .right-column[
 ![:scale 130%](figure4.jpg)
@@ -542,13 +527,14 @@ layout: false
 ---
 layout: false
 .left-column[
-  ## Figure 1b:
-  ## Supp. Fig. 1:
-  ## Supp. Fig. 2a:
-  ## Figure 2a:
-  ## Figure 3a:
-  ## Figure 4:
-  ## Figure 5:
+  ### Figure 1b:
+  ### Supp. Fig. 1:
+  ### Supp. Fig. 2a:
+  ### Figure 2a:
+  ### Figure 2d:
+  ### Figure 3a:
+  ### Figure 4:
+  ### Figure 5:
 ]
 .right-column[
 ![:scale 70%](figure5.jpg)
@@ -561,12 +547,12 @@ layout: false
 ]
 --
 .right-column[
-&lt;br&gt;&lt;br&gt;&lt;br&gt;
-- **Error rate** is still high, though is reduced with higher coverage and 2D reads.
+<br><br><br>
+- **Error rate** is still high, though is reduced with higher coverage, new 1D<sup>2</sup> reads, and new basecallers (maybe 1-5%).
 ]
 --
 .right-column[
-- Kits are still cold-chain limited, so **"portability"** is a bit tough to see.
+- Kits are still cold-chain limited, so **"portability"** is a bit tough to see (though they are working on thermo-stable (40'C for up to a month) lyophilised kits).
 ]
 --
 .right-column[
@@ -574,44 +560,7 @@ layout: false
 ]
 --
 .right-column[
-- Demonstration of **splice isoform** and **modified base** detection a bit weak.
+- Demonstration of **splice isoform** and **modified base** detection a bit weak in the paper, but I think more coming.
 ]
-    </textarea>
-<script src="libs/remark-latest.min.js"></script>
-<script src="https://cdn.rawgit.com/benkraj/nih_xaringan/master/ru_xaringan.js"></script>
-<script>var slideshow = remark.create({
-"highlightStyle": "github",
-"highlightLines": true,
-"countIncrementalSlides": false,
-"ratio": "16:9"
-});
-if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
-  window.dispatchEvent(new Event('resize'));
-});
-(function() {
-  var d = document, s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
-  if (!r) return;
-  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
-  d.head.appendChild(s);
-})();</script>
 
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  tex2jax: {
-    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
-  }
-});
-</script>
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-(function () {
-  var script = document.createElement('script');
-  script.type = 'text/javascript';
-  script.src  = 'https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML';
-  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
-    script.src  = script.src.replace(/^https?:/, '');
-  document.getElementsByTagName('head')[0].appendChild(script);
-})();
-</script>
-  </body>
-</html>
+
